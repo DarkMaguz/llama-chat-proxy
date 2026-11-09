@@ -1,0 +1,10 @@
+# llama-chat-proxy runtime dependencies (Python 3.9+).
+#
+# `uvicorn[standard]` pulls in uvloop/httptools for a faster event loop and
+# HTTP parsing. If you are on a platform without prebuilt wheels for those,
+# swap it for plain `uvicorn` -- the proxy works identically, just a little
+# slower.
+uvicorn[standard]==0.30.6
+httpx==0.27.2
+starlette==0.37.2
+cryptography==43.0.1
